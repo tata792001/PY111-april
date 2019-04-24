@@ -1,25 +1,36 @@
 """
 My little Stack
 """
-
+stack = [1,2,3,4,5]
 
 def push(elem) -> None:
+
+	stack.append(None)
+
+
 	"""
 	Operation that add element to stack
 
 	:param elem: element to be pushed
 	:return: Nothing
 	"""
-	return None
+
+	return stack
+
+
 
 
 def pop():
+	stack.pop()
+
+
+
 	"""
 	Pop element from the top of the stack
 
 	:return: popped element
 	"""
-	return None
+	return stack
 
 
 def peek(ind: int = 0):

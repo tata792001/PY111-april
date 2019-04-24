@@ -1,7 +1,8 @@
 """
 This module implements some functions based on linear search algo
 """
-
+import numpy
+import random
 
 def min_search(arr) -> int:
 	"""
@@ -11,7 +12,16 @@ def min_search(arr) -> int:
 	:return: index of first occurrence of minimal element in array
 	"""
 
-	return -1
+	N = 10
+	arr = []
+	for i in range(N):
+		arr.append(int(random() * 100) - 50)
+
+	num = 0
+	for i in range(1, N):
+		if abs(arr[i]) < abs(arr[num]):
+			num = i
+	return num + 1
 
 
 def min_weight_search(Graph) -> tuple:
