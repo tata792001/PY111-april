@@ -11,17 +11,11 @@ def min_search(arr) -> int:
 	:param arr: Array containing numbers
 	:return: index of first occurrence of minimal element in array
 	"""
-
-	N = 10
-	arr = []
-	for i in range(N):
-		arr.append(int(random() * 100) - 50)
-
 	num = 0
-	for i in range(1, N):
-		if abs(arr[i]) < abs(arr[num]):
+	for i in range(len(arr)):
+		if arr[i] < arr[num]:
 			num = i
-	return num + 1
+	return arr[num]
 
 
 def min_weight_search(Graph) -> tuple:
